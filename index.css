@@ -33,14 +33,17 @@
 
 .contenido h2 {
     margin-bottom: 20px; 
+    margin-right: 15px;
     font-size: 1.8em;
     background-color: #D8E5EB;
     border-radius: 8px;
+    
 
 }
 
 .contenido p {
     margin-top: 10px;
+    margin-right: 15px;
     line-height: 1.8;
     padding: 15px;
     font-size: 1.2em;
@@ -49,6 +52,26 @@
     color: #333;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+ol, ul {
+    margin-top: 15px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    background-color: #D8E5EB;
+    border-radius: 8px;
+    padding: 20px 30px; /* espacio interno en todos los lados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    margin-bottom: 8px;
+    margin-right: 40px;
+    font-size: 1.1em;
+    color: #333;
+    background-color: #D8E5EB;
+    padding-left: 10px;
+}
+
 .menu-secundario a{
     display: block;
     text-align: center;
@@ -142,3 +165,24 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+@keyframes show {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+ img{
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+        animation-timeline: --image;
+        animation-name: show;
+
+        animation-range: entry 10% cover 50%;
+        animation-fill-mode: both;
+    }
+
