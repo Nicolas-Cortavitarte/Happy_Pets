@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="headerfooter.css">
+</head>
+
+<body>
+    <div id="header"></div>
+<main>
+        <!-- Contenido Principal -->
+        <div class="contenido">
+            <div class="articulos">
+                <!-- Sección de Bienvenida -->
+                <div class="secciones">
+                    <div>
+                        <h2>Bienvenidos a Happy Pets</h2>
+                        <p>En Happy Pets nos dedicamos al cuidado y bienestar de tus mascotas con atención profesional y cariño. Nuestro equipo está aquí para brindarles el mejor servicio posible.</p>
+                    </div>
+                    <div><img src="Imagenes/servicios.jpg" alt="Veterinaria"></div>
+                </div>
+
+                <!-- Sección de Servicios -->
+                <div class="secciones">
+                    <div>
+                        <h2>Servicios Especializados</h2>
+                        <p>Ofrecemos servicios veterinarios como consultas generales, emergencias, cirugía, vacunación, y mucho más para garantizar la salud de tus mascotas.</p>
+                    </div>
+                    <div><img src="Imagenes/servicios2.jpeg" alt="Servicios"></div>
+                </div>
+
+                <!-- Sección de Productos -->
+                <div class="secciones">
+                    <div>
+                        <h2>Productos para tus Mascotas</h2>
+                        <p>En nuestra tienda encontrarás una variedad de productos para el cuidado de tus mascotas, desde alimentos hasta accesorios.</p>
+                    </div>
+                    <div><img src="Imagenes/productos.jpeg" alt="Productos"></div>
+                </div>
+            </div>
+
+            <!-- Menú Secundario -->
+            <div class="menu-secundario">
+                <a href="#">Consejos de cuidado para tu mascota</a>
+                <a href="#">Conoce nuestros servicios</a>
+                <a href="#">Testimonios de clientes satisfechos</a>
+                <a href="#">Blog sobre salud animal</a>
+                <a href="#">Promociones y ofertas</a>
+            </div>
+        </div>
+</main>
+        <div id="footer"></div>
+
+        <script>
+        fetch('headerfooter.html')
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data, 'text/html');
+                document.getElementById('header').innerHTML = doc.querySelector('header').outerHTML;
+                document.getElementById('footer').innerHTML = doc.querySelector('footer').outerHTML;
+            });
+    </script>
+</body>
+</html>
