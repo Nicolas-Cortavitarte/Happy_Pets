@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
 }
-.secciones h1 {
+.articulos h1 {
     text-align: center;
     background-color: #AAF0D1;
     color: black;
@@ -12,12 +12,12 @@
     border-radius: 10px;
 }
 
-.secciones h2 {
+.articulos h2 {
     margin-bottom: 20px; 
     font-size: 1.8em;
     border-radius: 8px;
     animation-name: colorChange;
-    animation-duration: 6s;
+    animation-duration: 3s;
     animation-iteration-count: 1;
     animation-direction: alternate;
 }
@@ -36,9 +36,10 @@
     font-size: 1.8em;
     background-color: #D8E5EB;
     border-radius: 8px;
+
 }
 
-p {
+.contenido p {
     margin-top: 10px;
     line-height: 1.8;
     padding: 15px;
@@ -58,6 +59,7 @@ p {
     padding: 10px;
     background-color: #f4f4f4;
     border-radius: 8px;
+    transition: background-color 0.5s, color 0.3s;
 }
 
 .contenido {
@@ -98,11 +100,6 @@ p {
 body {
     background-image: url('Imagenes/Huellas.jpeg');
     font-family: 'Poppins', sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;       
 }
 
 
