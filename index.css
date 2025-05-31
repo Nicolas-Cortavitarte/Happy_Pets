@@ -8,107 +8,197 @@
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     background-image: url(../Imagenes/Huellas.jpeg);
 }
 
-#carouselHappyPets {
-    margin: 20px auto;
-    max-width: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.carousel-item {
-    height: 500px;
-}
-
-.carousel-item img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 80%;
+main {
+    max-width: 1200px;
     margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20px;
+    padding: 20px;
 }
 
-.carousel-caption h3 {
+.hero {
+    background: linear-gradient(rgba(148, 180, 193, 0.9), rgba(84, 119, 146, 0.9)), url('Imagenes/servicios2.jpeg');
+    background-size: cover;
+    background-position: center;
     color: white;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 80px 20px;
+    margin: -20px -20px 40px -20px;
+    max-width: none;
 }
 
-.carousel-caption p {
-    color: white;
-    margin-bottom: 0;
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    opacity: 1;
-}
-
-.carousel-indicators {
+.hero h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 0 5px;
-    background-color: rgba(255,255,255,0.7);
-    border: 2px solid rgba(0,0,0,0.2);
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.servicios {
+    padding: 40px 0;
+}
+
+.servicios h2, .por-que-elegirnos h2 {
+    text-align: center;
+    color: #547792;
+    margin-bottom: 40px;
+    font-size: 2em;
+    background-color: lightblue;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.servicio-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.servicio-card h3, .servicio-card p {
+    padding: 15px;
+    margin: 0;
+}
+
+.servicio-card h3 {
+    color: #547792;
+}
+
+.razones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.razon {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
     transition: background-color 0.3s ease;
 }
 
-.carousel-indicators button.active {
-    background-color: white;
-    transform: scale(1.2);
+.razon:hover {
+    background: #94B4C1;
+    color: white;
+}
+
+.razon h3 {
+    color: #547792;
+    margin-bottom: 10px;
+}
+
+.razon:hover h3 {
+    color: white;
+}
+
+.contacto-rapido {
+    background-color: #94B4C1;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin: 40px -20px -20px -20px;
+    max-width: none;
+}
+
+.contacto-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacto-rapido h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.contacto-rapido p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
 }
 
 @media (max-width: 768px) {
-    .carousel-item {
-        height: 300px;
-    }
-    
-    .carousel-caption {
-        padding: 15px;
-        max-width: 90%;
-    }
-    
-    .carousel-caption h3 {
-        font-size: 1.5rem;
-    }
-    
-    .carousel-caption p {
-        font-size: 1rem;
+    .hero {
+        padding: 60px 20px;
     }
 
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 10%;
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .razones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .servicio-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .razones-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+
+    .servicio-card img {
+        height: 160px;
+    }
+
+    .servicios h2, 
+    .por-que-elegirnos h2,
+    .contacto-rapido h2 {
+        font-size: 1.8em;
     }
 }
