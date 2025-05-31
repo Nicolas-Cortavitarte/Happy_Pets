@@ -148,17 +148,21 @@ h3 {
   }
 }
 @media (max-width: 480px) {
-  h3 {
+  form {
     width: 90%;
+    padding: 20px;
+  }
+  h1 {
     font-size: 20px;
   }
+}
 
-  .direcciones {
-    width: 90%;
-    font-size: 14px;
+@media (min-width: 481px) and (max-width: 768px) {
+  form {
+    width: 80%;
+    padding: 30px;
   }
-
-  button {
-    width: 100%;
+  h1 {
+    font-size: 24px;
   }
 }
