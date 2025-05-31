@@ -91,15 +91,19 @@ li {
 }
 
 .articulos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
     width: 80%;
-    border-right: 3px solid #94B4C1; 
+    border-right: 3px solid #94B4C1;
 }
 
 .secciones {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     align-items: center;
     padding: 40px;
-    justify-content: space-between;
 }
 
 .secciones img {
